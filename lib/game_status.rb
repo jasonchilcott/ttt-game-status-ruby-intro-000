@@ -15,13 +15,13 @@ WIN_COMBINATIONS = [
   [2,4,6], # TR to BL diagonal
 ]
 
+# Define won?, full?, draw?, over?, and winner below
 def won?(board)
-  WIN_COMBINATIONS.each do |win_combination|
-   board[win_combination[0]] == board[win_combination[1]] &&
-   board[win_combination[3]] == board[win_combination[2]] &&
-   position_taken?(board, win_combination[0])
-   
- end
+  WIN_COMBINATIONS.detect do |combo|
+    board[combo[0]] == board[combo[1]] &&
+    board[combo[1]] == board[combo[2]] &&
+    position_taken?(board, combo[0])
+  end
 end
 
 
