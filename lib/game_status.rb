@@ -12,7 +12,7 @@ WIN_COMBINATIONS = [
   [1,4,7], # Middle column
   [2,5,8], # Right column
   [0,4,8], # TL to BR diagonal
-  [2,4,6], # TR to BL diagonal 
+  [2,4,6], # TR to BL diagonal
 ]
 
 def won?(board)
@@ -27,13 +27,13 @@ def won?(board)
 
    if position_1 == "X" && position_2 == "X" && position_3 == "X"
     return win_combination # return the win_combination indexes that won.
-  elsif position_1 == "O" && position_2 == "O" && position_3 == "O"  
+  elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
     return win_combination
   else
-    false 
+    false
       
- end 
-end  
+ end
+end
 
 
 
@@ -45,16 +45,16 @@ end
 
 def draw?(board)
   #
-end  
+end
 
 
 
 def over?(board)
   #
-end  
+end
 
 
 
 def winner(board)
   #
-end  
+end
