@@ -14,3 +14,47 @@ WIN_COMBINATIONS = [
   [0,4,8], # TL to BR diagonal
   [2,4,6], # TR to BL diagonal 
 ]
+
+def won?(board)
+  WIN_COMBINATIONS.each do |win_combination|
+   win_index_1 = win_combination[0]
+   win_index_2 = win_combination[1]
+   win_index_3 = win_combination[2]
+
+   position_1 = board[win_index_1] # load the value of the board at win_index_1
+   position_2 = board[win_index_2] # load the value of the board at win_index_2
+   position_3 = board[win_index_3] # load the value of the board at win_index_3
+
+   if position_1 == "X" && position_2 == "X" && position_3 == "X"
+    return win_combination # return the win_combination indexes that won.
+  elsif position_1 == "O" && position_2 == "O" && position_3 == "O"  
+    return win_combination
+  else
+    false 
+      
+ end 
+end  
+
+
+
+def full?(board)
+  #
+end
+
+
+
+def draw?(board)
+  #
+end  
+
+
+
+def over?(board)
+  #
+end  
+
+
+
+def winner(board)
+  #
+end  
