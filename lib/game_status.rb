@@ -15,6 +15,7 @@ WIN_COMBINATIONS = [
   [2,4,6], # TR to BL diagonal
 ]
 
+=begin
 def won?(board)
   WIN_COMBINATIONS.each do |win_combination|
    win_index_1 = win_combination[0]
@@ -26,15 +27,24 @@ def won?(board)
    position_3 = board[win_index_3]
 
    if position_1 == "X" && position_2 == "X" && position_3 == "X"
-    return true
+    return win_combination
   elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
-    return true
+    return win_combination
   else
      false
   end
  end
 end
+=end
 
+# Define won?, full?, draw?, over?, and winner below
+def won?(board)
+  WIN_COMBINATIONS.detect do |combo|
+    board[combo[0]] == board[combo[1]] &&
+    board[combo[1]] == board[combo[2]] &&
+    position_taken?(board, combo[0])
+  end
+end
 
 def full?(board)
   #
