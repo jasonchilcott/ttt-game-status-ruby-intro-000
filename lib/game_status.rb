@@ -64,7 +64,7 @@ end
 
 
 def winner(board)
-  won?(board).detect do |win|
-    board[[win[0]]
+  if winning_combo = won?(board)
+    board[winning_combo.first]
   end
 end
