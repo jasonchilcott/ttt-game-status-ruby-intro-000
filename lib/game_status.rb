@@ -64,5 +64,7 @@ end
 
 
 def winner(board)
-  won?(board).detect {|token| token.string?}
+  won?(board).detect do |win|
+    board(win[0])
+  end
 end
