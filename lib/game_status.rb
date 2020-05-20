@@ -47,6 +47,7 @@ def won?(board)
 end
 
 def full?(board)
+  puts ['test starts here for console logging or whatever']
   board.any? do |index|
     puts position_taken?(board, index)
   end
