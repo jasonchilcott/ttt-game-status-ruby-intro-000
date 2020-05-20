@@ -47,7 +47,7 @@ def won?(board)
 end
 
 def full?(board)
-  board.any do |index|
+  board.any? do |index|
     !position_taken?(board, index)
   end
 end
