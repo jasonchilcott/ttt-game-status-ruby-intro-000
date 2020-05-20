@@ -47,8 +47,8 @@ def won?(board)
 end
 
 def full?(board)
-  board.detect do |space|
-    !position_taken?(board, space)
+  board.any do |index|
+    !position_taken?(board, index)
   end
 end
 
