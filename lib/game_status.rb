@@ -65,6 +65,6 @@ end
 
 def winner(board)
   won?(board).detect do |win|
-    board(win[0])
+    board[[win[0]]
   end
 end
