@@ -48,7 +48,7 @@ end
 
 def full?(board)
   board.detect do |space|
-    position_taken?(space)
+    !position_taken?(space)
   end
 end
 
